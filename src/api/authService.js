@@ -30,6 +30,11 @@ export const resetPassword = (data) => {
     return api.post("/reset-password", data);
 };
 
+//refresh JWT token
+export const refreshToken = () => {
+    return api.post("/refresh");
+};
+
 //get logged user (protected route)
 export const getProfile = (token) => {
     return api.get("/profile", {
